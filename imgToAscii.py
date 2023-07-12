@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from PIL import Image
 
 # Abre la imagen
@@ -66,5 +65,4 @@ print(dibujo_ascii)
 with open('dibujo_ascii.txt', 'w') as archivo:
     archivo.write(dibujo_ascii)
 
->>>>>>> c87c2be3f2a69c69302ad163c9e09c3e9199c2ad
 print("El archivo 'dibujo_ascii.txt' ha sido creado exitosamente.")
