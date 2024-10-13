@@ -42,7 +42,7 @@ alias nrun="npm i && npm run dev"
 
 # Funcion para apagar
 function adios() {
-	echo "Hasta mañana, crac. TQM"
+	echo "Hasta luego, Mathi. Te quiero u' monton!"
 	shutdown -s -t 300
 
 }
