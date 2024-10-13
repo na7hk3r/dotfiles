@@ -15,8 +15,8 @@ alias l='ls' #por si los typo
 
 # Easier navigation:
 alias ..='cd ..'
-alias cd..='cd ..'
 alias ...='cd ../..'
+alias ....='cd../../..'
 alias dt='cd ~/Desktop'
 
 # git
@@ -30,30 +30,19 @@ alias undopush='git push -f origin HEAD^:main'
 # otros aliases
 alias diskspace="df -P -kHl"
 alias dotfiles='cat ~/.bashrc'
+alias edit-dotfiles='vim ~/.bashrc'
+alias update-bash='source ~/.bashrc'
 alias alamierda='rm -rf'
 
 # ver el tamanio de un archivo
 alias fs="stat -f \"%z bytes\""
 
 # npm util
-# alias nrun="npm i && npm run dev && start http://localhost:5173"
-
-function nrun() {
-    npm i
-    npm run dev &  
-    sleep 5       
-    url=$(lsof -i -P -n | grep LISTEN | grep 'node' | grep 'localhost' | awk '{print $9}' | head -1)
-    if [ -n "$url" ]; then
-        start "http://$url"  # Usa 'start' en Windows para abrir el navegador
-    else
-        echo "No se pudo encontrar el puerto. ¿Está el servidor corriendo?"
-    fi
-}
-
+alias nrun="npm i && npm run dev"
 
 # Funcion para apagar
 function adios() {
-	echo "Hasta mañana, crack Loveyou"
+	echo "Hasta mañana, crac. TQM"
 	shutdown -s -t 300
 
 }
