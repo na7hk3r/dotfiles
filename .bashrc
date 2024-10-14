@@ -88,8 +88,5 @@ alias aver='explorer .'
 # Guardar los últimos 15 comandos en un archivo y mostrarlo
 alias h10='history 15 > ~/Desktop/hist.txt && sleep 2 && cat ~/Desktop/hist.txt'
 
-# Ver el tamaño de un archivo en bytes
-alias fs="stat -f \"%z bytes\""
-
 # NPM alias para instalar dependencias y ejecutar en modo desarrollo
 alias nrun="npm i && npm run dev"
