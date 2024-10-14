@@ -24,7 +24,11 @@ eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDob
 
 # Clona desde mi perfil 
 function clone() {
-    git clone "$NTKR/$1"
+    if [ -z "$1" ]; then
+        echo "Por favor, especifica el nombre del repositorio."
+    else
+        git clone "$NTKR/$1"
+    fi
 }
 
 # Apaga el sistema con un mensaje personalizado
@@ -50,12 +54,15 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias dt='cd ~/Desktop'
 alias dw='cd ~/Downloads'
+alias search='grep -rnw .'     # Buscar recursivamente dentro de los archivos
 
 # Git aliases
-alias add='git add .'
-alias push='git push origin main'
-alias log='git log -10 --oneline'
-alias stat='git status'
+alias add='git add .'                   # Git add, todo.
+alias commit='git commit -m'            # Commits, más rápido
+alias pull='git pull'                   # Actualizar el repositorio local
+alias push='git push origin main'       # Git push a MAIN
+alias log='git log -10 --oneline'       # Mostrar log de commits, breve y limpio
+alias stat='git status'                 # Mostrar el status del repo
 
 # Undo git push /reverse (deshacer el último push)
 alias undopush='git push -f origin HEAD^:main'
@@ -65,6 +72,8 @@ alias diskspace="df -P -kHl"                # Mostrar espacio en disco
 alias dotfiles='cat ~/.bashrc'              # Consultar el archivo .bashrc
 alias edit-dotfiles='vim ~/.bashrc'         # Editar el archivo .bashrc
 alias update-bash='source ~/.bashrc'        # Recargar el archivo .bashrc
+alias clean-cache='sudo apt-get clean && sudo apt-get autoremove'   # Limpieza de sistema
+
 
 # Comando para borrar directorios y archivos (usar con precaución)
 alias alamierda='rm -rf'
