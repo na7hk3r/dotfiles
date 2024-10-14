@@ -55,6 +55,7 @@ alias dw='cd ~/Downloads'
 alias add='git add .'
 alias push='git push origin main'
 alias log='git log -10 --oneline'
+alias stat='git status'
 
 # Undo git push /reverse (deshacer el último push)
 alias undopush='git push -f origin HEAD^:main'
@@ -66,7 +67,7 @@ alias edit-dotfiles='vim ~/.bashrc'         # Editar el archivo .bashrc
 alias update-bash='source ~/.bashrc'        # Recargar el archivo .bashrc
 
 # Comando para borrar directorios y archivos (usar con precaución)
-alias alamierda='rm -rfi'
+alias alamierda='rm -rf'
 
 # Abrir el explorador en la ubicación actual
 alias aver='explorer .'
