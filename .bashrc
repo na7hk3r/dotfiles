@@ -72,8 +72,12 @@ alias diskspace="df -P -kHl"                # Mostrar espacio en disco
 alias dotfiles='cat ~/.bashrc'              # Consultar el archivo .bashrc
 alias edit-dotfiles='vim ~/.bashrc'         # Editar el archivo .bashrc
 alias update-bash='source ~/.bashrc'        # Recargar el archivo .bashrc
-alias clean-cache='sudo apt-get clean && sudo apt-get autoremove'   # Limpieza de sistema
 
+# Ejecuta el limpiador de disco
+alias clean-cache='cleanmgr /sageset:1 && cleanmgr /sagerun:1'
+
+# Buscar recursivamente en archivos en el directorio actual
+alias search='findstr /s /i /n /c:'
 
 # Comando para borrar directorios y archivos (usar con precaución)
 alias alamierda='rm -rf'
