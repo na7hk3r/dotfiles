@@ -22,6 +22,7 @@ eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDob
 # FUNCIONES
 # ==============================
 
+# Clona desde mi perfil 
 function clone() {
     git clone "$NTKR/$1"
 }
@@ -53,6 +54,7 @@ alias dw='cd ~/Downloads'
 # Git aliases
 alias add='git add .'
 alias push='git push origin main'
+alias log='git log -10 --oneline'
 
 # Undo git push /reverse (deshacer el último push)
 alias undopush='git push -f origin HEAD^:main'
