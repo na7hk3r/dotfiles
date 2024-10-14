@@ -77,7 +77,7 @@ alias update-bash='source ~/.bashrc'        # Recargar el archivo .bashrc
 alias clean-cache='cleanmgr /sageset:1 && cleanmgr /sagerun:1'
 
 # Buscar recursivamente en archivos en el directorio actual
-alias search='findstr /s /i /n /c:'
+alias search='grep -rnw . -e'           # Search "ejemplo"
 
 # Comando para borrar directorios y archivos (usar con precaución)
 alias alamierda='rm -rf'
