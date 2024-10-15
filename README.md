@@ -6,15 +6,16 @@
 Este repositorio contiene mis dotfiles personales, usados para configurar mi entorno de trabajo. Estas configuraciones mejoran y hacen que el trabajo desde la terminal sea muuuuucho más rápido, ¡y divertido!.
 Está pensado para Windows, pero puedes tomarlo como referencia para adaptarlo a cualquier S.O. de tu preferencia.
 
-> [!WARNING]\ 
-> El lenguaje aquí utilizado, es terrible. Como es el caso de el alias para eliminar permanentemente: `alamierda`. 
+> [!WARNING]\
+> El lenguaje aquí utilizado, es __**terrible**__. Como es el caso de el alias para eliminar permanentemente: `alamierda`. Avisado quedas.
 
-## Archivos en este repositorio
+
+## Archivos en este repositorio 🗃️
 
 - `.bashrc`: Mi configuración custom de Git Bash. Incluye alias, variables de entorno y funciones.
 - `.gitconfig`: Configuraciones de git customizados. **(OJO 👁️)** en caso de usarlo, deberás cambiar los datos para no hacer commits en mi nombre.
 
-## Instalación
+## Instalación 🔧
 
 En caso de que quieras usar estas variables en tu entorno, estos son los pasos a seguir:
 
@@ -31,7 +32,7 @@ cp mis-scripts/.bashrc ~/
 cp mis-scripts/.gitconfig ~/
 ```
 
-## Customización (!)
+## Customización (⚠️)
 
 **Altamente recomendado**, siéntete libre de editar estos archivos para que se ajusten a tus preferencias. ¡Puedes tomarlo como referencia para crear tus propios alias, funciones o variables de entorno que se ajusten mejor a tu vocabulario y método de de trabajo!
 
@@ -44,7 +45,7 @@ Si te interesa esto, y quedaste con ganas de más, recomiendo altamente estos re
 (Mucho más completo, espero te ayuden.)
 
 
-## Licencia
+## Licencia 🪬
 
 Este proyecto, no tiene licencia alguna. Internet es libre. Copia, roba, piratea. Salud! El viejo pana Nathker🏴‍☠️
 
