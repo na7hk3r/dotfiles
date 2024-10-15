@@ -53,5 +53,8 @@ Si deseas contribuir, sentite libre de abrir un issue o hacer un pull request. �
 
 ## Licencia 🪬
 
-Este proyecto, no tiene licencia alguna. Internet es libre. Copia, roba, piratea. Salud! El viejo pana Nathker🏴‍☠️
+Este proyecto, no tiene licencia alguna. Internet es libre. Copia, roba, piratea. ¡Salud! El viejo pana Nathker🏴‍☠️
+
+
+#### 73lab_
 
