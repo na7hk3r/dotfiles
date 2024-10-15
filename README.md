@@ -3,7 +3,7 @@
 
 <img src="https://www.smcurbelo.com/assets/logo_sword-BoM_bXo2.png" width="15%" height="auto" align="right">
 
-Este repositorio contiene mis dotfiles personales, usados para configurar mi entorno de trabajo. Estas configuraciones mejoran y hacen que el trabajo desde la terminal sea muuuuucho más rápido, ¡y divertido!.
+Este repositorio contiene mis dotfiles personales, usados para configurar mi entorno de trabajo. Estas configuraciones mejoran y hacen que el trabajo desde la terminal sea **muuuuucho** más rápido, ¡y divertido!.
 Está pensado para Windows, pero puedes tomarlo como referencia para adaptarlo a cualquier S.O. de tu preferencia.
 
 > [!WARNING]\
@@ -14,6 +14,7 @@ Está pensado para Windows, pero puedes tomarlo como referencia para adaptarlo a
 
 - `.bashrc`: Mi configuración custom de Git Bash. Incluye alias, variables de entorno y funciones.
 - `.gitconfig`: Configuraciones de git customizados. **(OJO 👁️)** en caso de usarlo, deberás cambiar los datos para no hacer commits en mi nombre.
+- `mis-scripts/ . . . `: Distintas utilidades que a veces uso. Como mantener activo mi blog (experimental 🔬), o crear arte ASCII. *nota: tiene otros como clonar repo que ya no uso, pero que sirven a modo de ejemplo.
 
 ## Instalación 🔧
 
@@ -38,11 +39,16 @@ cp mis-scripts/.gitconfig ~/
 
 Si te interesa esto, y quedaste con ganas de más, recomiendo altamente estos repositorios que sirvieron como guía e inspiración:
 
-[dotfiles - paulirish](https://github.com/paulirish/dotfiles)
-
-[windots - scottmckendry](https://github.com/scottmckendry/Windots)
+| Repo                                                          | Descripcion                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [dotfiles - paulirish](https://github.com/paulirish/dotfiles) | Un conjunto de dotfiles altamente personalizables.                  |
+| [windots - scottmckendry](https://github.com/scottmckendry/Windots) | Configuraciones útiles, con más foco en Windows.              |
 
 (Mucho más completo, espero te ayuden.)
+
+## Contribuciones 🤝
+
+Si deseas contribuir, sentite libre de abrir un issue o hacer un pull request. ¡Toda ayuda es bienvenida!
 
 
 ## Licencia 🪬
