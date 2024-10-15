@@ -1,10 +1,36 @@
 [core]
-	editor = \"C:\\Users\\elmat\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+    editor = "C:\\Users\\elmat\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code" --wait
 [user]
-	name = Mathias Curbelo
-	email = 104522465+na7hk3r@users.noreply.github.com
+    name = Mathias Curbelo
+    email = 104522465+na7hk3r@users.noreply.github.com
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[color]
+    ui = auto
+
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    lg = log --oneline --graph --decorate
+
+[pull]
+    rebase = true
+
+[credential]
+    helper = cache
+
+[merge]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
+[init]
+    defaultBranch = main
