@@ -22,7 +22,7 @@ En caso de que quieras usar estas variables en tu entorno, estos son los pasos a
 
 ```bash
 # Clona este repo
-git clone https://github.com/na7hk3r/mis-scripts.git
+git clone https://github.com/na7hk3r/dotfiles.git
 
 # Respalda tus archivos existentes (por si acaso)
 mv ~/.bashrc ~/.bashrc_backup
