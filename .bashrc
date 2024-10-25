@@ -37,12 +37,18 @@ function adios() {
     shutdown -s -t 300
 }
 
+# Abre el directorio actual en Neovim
+function edit_dir() {
+    nvim .
+}
+
 # ==============================
 # ALIAS
 # ==============================
 
 # Alias para abrir Obsidian
 alias obs='$OBS'
+alias obs_dir='cd ~/OneDrive/Documentos/73lab'
 
 # Superpower 'ls' con opciones personalizadas
 alias ls='ls --color --group-directories-first --sort=extension -A'
@@ -70,7 +76,7 @@ alias undopush='git push -f origin HEAD^:main'
 # Alias útiles del sistema
 alias diskspace="df -P -kHl"                # Mostrar espacio en disco
 alias dotfiles='cat ~/.bashrc'              # Consultar el archivo .bashrc
-alias edit-dotfiles='vim ~/.bashrc'         # Editar el archivo .bashrc
+alias edit-dotfiles='nvim ~/.bashrc'         # Editar el archivo .bashrc
 alias update-bash='source ~/.bashrc'        # Recargar el archivo .bashrc
 
 # Ejecuta el limpiador de disco
