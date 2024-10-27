@@ -29,8 +29,8 @@ mv ~/.bashrc ~/.bashrc_backup
 mv ~/.gitconfig ~/.gitconfig_backup
 
 # Copia los nuevos!
-cp mis-scripts/.bashrc ~/
-cp mis-scripts/.gitconfig ~/
+cp dotfiles/.bashrc ~/
+cp dotfiles/.gitconfig ~/
 ```
 
 ## Customización (⚠️)
