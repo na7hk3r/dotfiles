@@ -298,5 +298,22 @@ reload
 
 ---
 
-*Última actualización: $(date)*
+*Última actualización: 2025-07-19*
 *Configuración optimizada para Warp Terminal en Windows*
+
+## 🆕 Cambios Recientes
+
+### ✨ Nuevos Aliases Agregados (19/07/2025):
+- `Search-Files <pattern>`: Función PowerShell mejorada para búsqueda
+- Mejoras en funciones de memoria y CPU con información más detallada
+- Funciones de conectividad mejoradas con manejo de errores
+- Optimizaciones en funciones de análisis de disco
+
+### 🔧 Funciones Mejoradas:
+- `memory`: Ahora muestra información más detallada en GB
+- `cpu`: Información mejorada del procesador
+- `myip`/`localip`: Manejo mejorado de errores de conectividad
+- `speedtest`: Manejo de errores más robusto
+- `diskusage`: Mejor formato de salida ordenada
+- `extract`: Soporte mejorado para múltiples formatos
+- `weather`: Manejo de timeout y errores mejorado
