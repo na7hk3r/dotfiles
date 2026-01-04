@@ -1,3 +1,4 @@
+
 -- Instalar lazy.nvim si no está instalado
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -21,13 +22,16 @@ end
 -- Configurar plugins
 lazy.setup({
   -- Colores
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    config = function()
-      vim.cmd.colorscheme "catppuccin"
-    end,
-  },
+
+ {
+  "xero/evangelion.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("evangelion")
+  end,
+ },
+
 
   -- Búsqueda
   {
@@ -37,23 +41,6 @@ lazy.setup({
     cmd = "Telescope",  -- Lazy load cuando se use el comando
     config = function()
       require('telescope').setup{}
-    end,
-  },
-
-  -- Syntax Highlighting y Treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-    config = function()
-      require('nvim-treesitter.configs').setup({
-        ensure_installed = { "lua", "javascript", "html", "css", "python" }, -- Añadir lenguajes
-        highlight = {
-          enable = true,
-        },
-        indent = {
-          enable = true,  -- Habilita indentación automática
-        },
-      })
     end,
   },
 

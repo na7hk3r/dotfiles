@@ -1,22 +1,40 @@
 # ==============================
+# PERFORMANCE OPTIMIZATIONS
+# ==============================
+# Exit early if non-interactive
+[[ $- != *i* ]] && return
+
+# Skip if already loaded
+[[ -n "$BASHRC_LOADED" ]] && return
+export BASHRC_LOADED=1
+
+# ==============================
 # VARIABLES DE ENTORNO
 # ==============================
-
-# Variable OBS para abrir Obsidian
 export OBS="C:/Users/elmat/AppData/Local/Obsidian/Obsidian.exe"
-
-# URL de GitHub personal
 export NTKR="https://github.com/na7hk3r"
+export EDITOR="nvim"
+export PAGER="less"
 
 # ==============================
-# INICIADORES
+# SHELL CONFIGURATION
 # ==============================
+# History optimization
+HISTCONTROL=ignoreboth:erasedups
+HISTSIZE=2000
+HISTFILESIZE=5000
 
-# Iniciar Oh-my-posh con el tema especificado
-eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/space.omp.json)"
-
-# Opciones buenas por si pinta cambiaso
-#eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/amro.omp.json)"
+# ==============================
+# PROMPT (Oh-my-posh optimized)
+# ==============================
+# Use local cached theme instead of remote URL
+POSH_THEME="$USERPROFILE/.config/oh-my-posh/space.omp.json"
+if [[ -f "$POSH_THEME" ]]; then
+    eval "$(oh-my-posh init bash --config "$POSH_THEME")"
+else
+    # Fallback to simple prompt if oh-my-posh fails
+    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+fi
 
 # ==============================
 # FUNCIONES
@@ -152,12 +170,26 @@ alias memory='wmic OS get TotalVisibleMemorySize,FreePhysicalMemory /format:tabl
 alias cpu='wmic cpu get loadpercentage /value' # Uso de CPU
 alias temp='wmic /namespace:\\root\wmi PATH MSAcpi_ThermalZoneTemperature get CurrentTemperature'
 
-# Red y conectividad
-alias myip='curl -s https://ipinfo.io/ip'     # IP pública
-alias localip='ipconfig | findstr IPv4'       # IP local
-alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python'
+# Red y conectividad (básicas)
+alias localip='ipconfig | findstr IPv4'       # IP local  
 alias ping8='ping 8.8.8.8'                   # Test conectividad
 alias flushdns='ipconfig /flushdns'           # Limpiar DNS
+
+# ==============================
+# LAZY LOADING FUNCTIONS (HEAVY OPERATIONS)
+# ==============================
+# Network functions that make external calls
+myip() {
+    unset -f myip
+    myip() { curl -s https://ipinfo.io/ip 2>/dev/null || echo "IP service unavailable"; }
+    myip "$@"
+}
+
+speedtest() {
+    unset -f speedtest
+    speedtest() { curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python 2>/dev/null || echo "Speedtest unavailable"; }
+    speedtest "$@"
+}
 
 # Shortcuts útiles
 alias c='clear'                               # Limpiar terminal
@@ -217,7 +249,20 @@ function extract() {
     fi
 }
 
-# Función para weather
-function weather() {
-    curl -s "wttr.in/$1"
+# Lazy loading weather function
+weather() {
+    unset -f weather
+    weather() { curl -s "wttr.in/$1?format=3" 2>/dev/null || echo "Weather service unavailable"; }
+    weather "$@"
 }
+
+# ==============================
+# PERFORMANCE FINAL OPTIMIZATIONS  
+# ==============================
+# Disable mail checking
+MAILCHECK=0
+
+# Disable history expansion (can be slow)
+set +H
+
+echo "🚀 Git Bash optimized and ready!"

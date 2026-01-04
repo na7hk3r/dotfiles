@@ -1,7 +1,7 @@
 [core]
     editor = "C:\\Users\\elmat\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code" --wait
 [user]
-    name = Mathias Curbelo
+    name = Sergio Curbelo
     email = 104522465+na7hk3r@users.noreply.github.com
 [filter "lfs"]
     clean = git-lfs clean -- %f
