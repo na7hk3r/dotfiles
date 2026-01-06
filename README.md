@@ -14,7 +14,27 @@ Está pensado para Windows, pero puedes tomarlo como referencia para adaptarlo a
 
 - `.bashrc`: Mi configuración custom de Git Bash. Incluye alias, variables de entorno y funciones.
 - `.gitconfig`: Configuraciones de git customizados. **(OJO 👁️)** en caso de usarlo, deberás cambiar los datos para no hacer commits en mi nombre.
-- `mis-scripts/ . . . `: Distintas utilidades que a veces uso. Como mantener activo mi blog (experimental 🔬), o crear arte ASCII. *nota: tiene otros como clonar repo que ya no uso, pero que sirven a modo de ejemplo.
+- `nvim/`: Configuración de Neovim con Lazy.nvim como gestor de plugins.
+- `powershell/`: Scripts de PowerShell, incluyendo el profile y script de setup.
+- `scripts/`: Distintas utilidades que a veces uso. Como mantener activo mi blog (experimental 🔬), o crear arte ASCII. *nota: tiene otros como clonar repo que ya no uso, pero que sirven a modo de ejemplo.
+
+## Setup de Neovim 🚀
+
+El script `powershell/setup.ps1` automatiza la configuración de Neovim en Windows:
+
+```powershell
+# Ejecuta el script de setup
+.\powershell\setup.ps1
+```
+
+**¿Qué hace el script?**
+- Crea los directorios necesarios en `~\.local\src` y `AppData\Local\nvim-data`
+- Clona los dotfiles de referencia (si no existen)
+- Hace backup de tu configuración de nvim existente (si la hay)
+- Instala la configuración de Neovim
+
+> [!NOTE]
+> Asegúrate de tener [Neovim](https://neovim.io/) y [Git](https://git-scm.com/) instalados antes de ejecutar el script.
 
 ## Instalación 🔧
 
